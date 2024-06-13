@@ -1,0 +1,62 @@
+2024-06-04T19:53:40.4253435-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-04T19:53:40.4998623-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-04T19:53:40.5024754-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-04T19:53:40.5295538-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-04T19:53:40.7441231-03:00 0HN44T4MNDJ7K:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-04T19:53:41.3054177-03:00 0HN44T4MNDJ7K:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 566.8936ms (74253ad3)
+2024-06-04T19:53:41.3355767-03:00 0HN44T4MNDJ7K:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-04T19:53:41.3355572-03:00 0HN44T4MNDJ7L:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-04T19:53:41.3375002-03:00 0HN44T4MNDJ7K:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 1.9467ms (74253ad3)
+2024-06-04T19:53:41.3835647-03:00 0HN44T4MNDJ7L:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 48.2015ms (74253ad3)
+2024-06-04T19:53:41.4580261-03:00 0HN44T4MNDJ7L:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-04T19:53:41.5962080-03:00 0HN44T4MNDJ7L:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 138.0968ms (74253ad3)
+2024-06-04T19:54:27.2246718-03:00 0HN44T4MNDJ7M:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/description/string""" - null null (d509f86a)
+2024-06-04T19:54:27.2332033-03:00 0HN44T4MNDJ7M:00000001 [INF] Executing endpoint '"ApiTF.Controllers.ProductController.GetByDescription (ApiTF)"' (500cc934)
+2024-06-04T19:54:27.2698367-03:00 0HN44T4MNDJ7M:00000001 [INF] Route matched with "{action = \"GetByDescription\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbProduct] GetByDescription(System.String)" on controller "ApiTF.Controllers.ProductController" ("ApiTF"). (122b2fdf)
+2024-06-04T19:54:29.5585985-03:00 0HN44T4MNDJ7M:00000001 [INF] Executed DbCommand ("53"ms) [Parameters=["@__description_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.description = @__description_0
+LIMIT 1" (0723d8ff)
+2024-06-04T19:54:29.6610107-03:00 0HN44T4MNDJ7M:00000001 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbProduct"'. (605b4265)
+2024-06-04T19:54:29.6842092-03:00 0HN44T4MNDJ7M:00000001 [INF] Executed action "ApiTF.Controllers.ProductController.GetByDescription (ApiTF)" in 2410.2268ms (afa2e885)
+2024-06-04T19:54:29.6844209-03:00 0HN44T4MNDJ7M:00000001 [INF] Executed endpoint '"ApiTF.Controllers.ProductController.GetByDescription (ApiTF)"' (99874f2b)
+2024-06-04T19:54:29.6971130-03:00 0HN44T4MNDJ7M:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/description/string""" - 200 null "application/json; charset=utf-8" 2472.4171ms (74253ad3)
+2024-06-04T19:54:45.6178861-03:00 0HN44T4MNDJ7N:00000001 [INF] Request starting "HTTP/1.1" "PUT" "http"://"localhost:5263""""/ajustestock/1""?qty=3" - null 0 (d509f86a)
+2024-06-04T19:54:45.6184781-03:00 0HN44T4MNDJ7N:00000001 [INF] Executing endpoint '"ApiTF.Controllers.ProductController.AdjustStock (ApiTF)"' (500cc934)
+2024-06-04T19:54:45.6303025-03:00 0HN44T4MNDJ7N:00000001 [INF] Route matched with "{action = \"AdjustStock\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbProduct] AdjustStock(Int32, Int32)" on controller "ApiTF.Controllers.ProductController" ("ApiTF"). (122b2fdf)
+2024-06-04T19:54:45.6748220-03:00 0HN44T4MNDJ7N:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-04T19:54:45.7714147-03:00 0HN44T4MNDJ7N:00000001 [INF] Executed DbCommand ("12"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;" (0723d8ff)
+2024-06-04T19:54:45.7777966-03:00 0HN44T4MNDJ7N:00000001 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbProduct"'. (605b4265)
+2024-06-04T19:54:45.7781436-03:00 0HN44T4MNDJ7N:00000001 [INF] Executed action "ApiTF.Controllers.ProductController.AdjustStock (ApiTF)" in 147.5805ms (afa2e885)
+2024-06-04T19:54:45.7782684-03:00 0HN44T4MNDJ7N:00000001 [INF] Executed endpoint '"ApiTF.Controllers.ProductController.AdjustStock (ApiTF)"' (99874f2b)
+2024-06-04T19:54:45.7784690-03:00 0HN44T4MNDJ7N:00000001 [INF] Request finished "HTTP/1.1" "PUT" "http"://"localhost:5263""""/ajustestock/1""?qty=3" - 200 null "application/json; charset=utf-8" 160.8281ms (74253ad3)
+2024-06-04T19:57:39.2763866-03:00 0HN44T4MNDJ7N:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/1""" - null null (d509f86a)
+2024-06-04T19:57:39.2797149-03:00 0HN44T4MNDJ7N:00000002 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.GetById (ApiTF)"' (500cc934)
+2024-06-04T19:57:39.2822117-03:00 0HN44T4MNDJ7N:00000002 [INF] Route matched with "{action = \"GetById\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] GetById(Int32)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-04T19:57:39.3570764-03:00 0HN44T4MNDJ7N:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-04T19:57:39.3780088-03:00 0HN44T4MNDJ7N:00000002 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbPromotion"'. (605b4265)
+2024-06-04T19:57:39.3820495-03:00 0HN44T4MNDJ7N:00000002 [INF] Executed action "ApiTF.Controllers.PromotionController.GetById (ApiTF)" in 99.6915ms (afa2e885)
+2024-06-04T19:57:39.3821203-03:00 0HN44T4MNDJ7N:00000002 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.GetById (ApiTF)"' (99874f2b)
+2024-06-04T19:57:39.3822830-03:00 0HN44T4MNDJ7N:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/1""" - 200 null "application/json; charset=utf-8" 112.3391ms (74253ad3)
+2024-06-04T19:58:19.0485296-03:00 0HN44T4MNDJ7N:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/promotion/1""?productId=1&startDate=2024-07-20T09%3A00%3A00&endDate=2024-09-30T23%3A59%3A59" - null null (d509f86a)
+2024-06-04T19:58:19.0556154-03:00 0HN44T4MNDJ7N:00000003 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.GetByPromotion (ApiTF)"' (500cc934)
+2024-06-04T19:58:19.0594920-03:00 0HN44T4MNDJ7N:00000003 [INF] Route matched with "{action = \"GetByPromotion\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] GetByPromotion(Int32, System.DateTime, System.DateTime)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-04T19:58:19.0847523-03:00 0HN44T4MNDJ7N:00000003 [INF] Executed DbCommand ("5"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__startDate_1='?' (DbType = DateTime2), @__endDate_2='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND @__startDate_1 >= t.startdate AND @__endDate_2 >= t.enddate" (0723d8ff)
+2024-06-04T19:58:19.0853467-03:00 0HN44T4MNDJ7N:00000003 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.BaseDados.Models.TbPromotion, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-04T19:58:19.0862871-03:00 0HN44T4MNDJ7N:00000003 [INF] Executed action "ApiTF.Controllers.PromotionController.GetByPromotion (ApiTF)" in 26.674ms (afa2e885)
+2024-06-04T19:58:19.0863448-03:00 0HN44T4MNDJ7N:00000003 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.GetByPromotion (ApiTF)"' (99874f2b)
+2024-06-04T19:58:19.0864954-03:00 0HN44T4MNDJ7N:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/promotion/1""?productId=1&startDate=2024-07-20T09%3A00%3A00&endDate=2024-09-30T23%3A59%3A59" - 200 null "application/json; charset=utf-8" 38.995ms (74253ad3)

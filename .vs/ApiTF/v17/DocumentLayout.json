@@ -1,0 +1,415 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\ApiTF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\validate\\stocklogvalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\validate\\stocklogvalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\promotionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\promotionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\validate\\promotionvalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\validate\\promotionvalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\stocklogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\stocklogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\validate\\productvalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\validate\\productvalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\basedados\\tfdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\basedados\\tfdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\dtos\\stocklogresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\dtos\\stocklogresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\dtos\\salereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\dtos\\salereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\dtos\\promotiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\dtos\\promotiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\dtos\\productdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\dtos\\productdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\controllers\\stocklogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\controllers\\stocklogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\validate\\salevalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\validate\\salevalidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\parsers\\promotionparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\parsers\\promotionparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\parsers\\productparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\parsers\\productparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\services\\exceptions\\insufficientstockexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\services\\exceptions\\insufficientstockexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|c:\\users\\user\\source\\repos\\apitf\\apitf\\basedados\\models\\tbproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20ABB057-0B12-4502-AFE5-84BF528438BC}|ApiTF\\ApiTF.csproj|solutionrelative:apitf\\basedados\\models\\tbproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\ProductService.cs",
+              "RelativeToolTip": "ApiTF\\Services\\ProductService.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAkwFcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T23:56:05.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PromotionService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\PromotionService.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\PromotionService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\PromotionService.cs",
+              "RelativeToolTip": "ApiTF\\Services\\PromotionService.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAswEUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:43:19.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SaleService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\SaleService.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\SaleService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\SaleService.cs",
+              "RelativeToolTip": "ApiTF\\Services\\SaleService.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAwwA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T23:14:45.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductValidate.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\ProductValidate.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Validate\\ProductValidate.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\ProductValidate.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Validate\\ProductValidate.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAkwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:35:58.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StockLogResultDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\StockLogResultDTO.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\DTOs\\StockLogResultDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\StockLogResultDTO.cs",
+              "RelativeToolTip": "ApiTF\\Services\\DTOs\\StockLogResultDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:50:38.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TfDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\BaseDados\\TfDbContext.cs",
+              "RelativeDocumentMoniker": "ApiTF\\BaseDados\\TfDbContext.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\BaseDados\\TfDbContext.cs",
+              "RelativeToolTip": "ApiTF\\BaseDados\\TfDbContext.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAowJ8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T19:39:36.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PromotionValidate.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\PromotionValidate.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Validate\\PromotionValidate.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\PromotionValidate.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Validate\\PromotionValidate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T19:20:17.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StockLogValidate.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\StockLogValidate.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Validate\\StockLogValidate.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\StockLogValidate.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Validate\\StockLogValidate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:36:48.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StockLogService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\StockLogService.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\StockLogService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\StockLogService.cs",
+              "RelativeToolTip": "ApiTF\\Services\\StockLogService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T23:24:19.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Program.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Program.cs",
+              "RelativeToolTip": "ApiTF\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAEUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T00:21:11.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Mappings\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T19:09:26.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SaleReportDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\SaleReportDTO.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\DTOs\\SaleReportDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\SaleReportDTO.cs",
+              "RelativeToolTip": "ApiTF\\Services\\DTOs\\SaleReportDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T20:38:51.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PromotionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\PromotionDTO.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\DTOs\\PromotionDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\PromotionDTO.cs",
+              "RelativeToolTip": "ApiTF\\Services\\DTOs\\PromotionDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:47:58.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductDetailsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\ProductDetailsDTO.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\DTOs\\ProductDetailsDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\DTOs\\ProductDetailsDTO.cs",
+              "RelativeToolTip": "ApiTF\\Services\\DTOs\\ProductDetailsDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T11:51:09.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StockLogController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\StockLogController.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Controllers\\StockLogController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\StockLogController.cs",
+              "RelativeToolTip": "ApiTF\\Controllers\\StockLogController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T19:36:42.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SaleController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\SaleController.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Controllers\\SaleController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\SaleController.cs",
+              "RelativeToolTip": "ApiTF\\Controllers\\SaleController.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAowHAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:34:13.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PromotionController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\PromotionController.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Controllers\\PromotionController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\PromotionController.cs",
+              "RelativeToolTip": "ApiTF\\Controllers\\PromotionController.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAowIcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T00:13:47.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ApiTF\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAowKwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T22:28:34.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SaleValidate.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\SaleValidate.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Validate\\SaleValidate.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Validate\\SaleValidate.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Validate\\SaleValidate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:36:31.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PromotionParser.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Parsers\\PromotionParser.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Parsers\\PromotionParser.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Parsers\\PromotionParser.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Parsers\\PromotionParser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T13:32:11.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductParser.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Parsers\\ProductParser.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Parsers\\ProductParser.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Parsers\\ProductParser.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Parsers\\ProductParser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T23:58:52.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InsufficientStockException.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Exceptions\\InsufficientStockException.cs",
+              "RelativeDocumentMoniker": "ApiTF\\Services\\Exceptions\\InsufficientStockException.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\Services\\Exceptions\\InsufficientStockException.cs",
+              "RelativeToolTip": "ApiTF\\Services\\Exceptions\\InsufficientStockException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T20:47:14.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TbProduct.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\BaseDados\\Models\\TbProduct.cs",
+              "RelativeDocumentMoniker": "ApiTF\\BaseDados\\Models\\TbProduct.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\ApiTF\\ApiTF\\BaseDados\\Models\\TbProduct.cs",
+              "RelativeToolTip": "ApiTF\\BaseDados\\Models\\TbProduct.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAQwC8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T00:02:52.24Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
