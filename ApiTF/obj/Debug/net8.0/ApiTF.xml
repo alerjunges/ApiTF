@@ -235,11 +235,11 @@
             <response code="404">Indica que o ID do produto não foi encontrado ou nenhuma promoção foi encontrada para o período especificado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ApiTF.Controllers.SalesController.Insert(System.Collections.Generic.List{ApiTF.Services.DTOs.SaleDTO})">
+        <member name="M:ApiTF.Controllers.SalesController.Insert(ApiTF.Services.DTOs.SaleDTO)">
             <summary>
             Insere uma nova venda.
             </summary>
-            <param name="saleDtoList">A lista de dados da venda.</param>
+            <param name="sale">A lista de dados da venda.</param>
             <returns>Os detalhes da venda registrada.</returns>
             <response code="200">Venda criada com sucesso</response>
             <response code="400">Erro de validação nos dados da venda ou que o estoque é insuficiente.</response>

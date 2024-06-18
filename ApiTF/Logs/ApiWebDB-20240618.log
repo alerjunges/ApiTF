@@ -1,0 +1,768 @@
+2024-06-18T00:00:58.3525288-03:00 0HN4F89PCK6A4:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/description/camisa""" - null null (d509f86a)
+2024-06-18T00:00:58.3537827-03:00 0HN4F89PCK6A4:00000001 [INF] Executing endpoint '"ApiTF.Controllers.ProductController.GetByDescription (ApiTF)"' (500cc934)
+2024-06-18T00:00:58.3618232-03:00 0HN4F89PCK6A4:00000001 [INF] Route matched with "{action = \"GetByDescription\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbProduct] GetByDescription(System.String)" on controller "ApiTF.Controllers.ProductController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:00:58.5412783-03:00 0HN4F89PCK6A4:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__description_0_contains='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.description LIKE @__description_0_contains" (0723d8ff)
+2024-06-18T00:00:58.6152882-03:00 0HN4F89PCK6A4:00000001 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.BaseDados.Models.TbProduct, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T00:00:58.6390142-03:00 0HN4F89PCK6A4:00000001 [INF] Executed action "ApiTF.Controllers.ProductController.GetByDescription (ApiTF)" in 276.8654ms (afa2e885)
+2024-06-18T00:00:58.6391734-03:00 0HN4F89PCK6A4:00000001 [INF] Executed endpoint '"ApiTF.Controllers.ProductController.GetByDescription (ApiTF)"' (99874f2b)
+2024-06-18T00:00:58.6398084-03:00 0HN4F89PCK6A4:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/description/camisa""" - 200 null "application/json; charset=utf-8" 287.3273ms (74253ad3)
+2024-06-18T00:01:12.0768511-03:00 0HN4F89PCK6A5:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 144 (d509f86a)
+2024-06-18T00:01:12.0773728-03:00 0HN4F89PCK6A5:00000001 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:01:12.0775644-03:00 0HN4F89PCK6A5:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:01:12.2236435-03:00 0HN4F89PCK6A5:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:01:12.2816115-03:00 0HN4F89PCK6A5:00000001 [INF] Executing "ObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-06-18T00:01:12.2821412-03:00 0HN4F89PCK6A5:00000001 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 204.4332ms (afa2e885)
+2024-06-18T00:01:12.2822482-03:00 0HN4F89PCK6A5:00000001 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:01:12.2826292-03:00 0HN4F89PCK6A5:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 500 null "application/json; charset=utf-8" 205.8509ms (74253ad3)
+2024-06-18T00:01:19.3871779-03:00 0HN4F89PCK6A6:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 144 (d509f86a)
+2024-06-18T00:01:19.3878200-03:00 0HN4F89PCK6A6:00000001 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:01:19.3881559-03:00 0HN4F89PCK6A6:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:01:19.3968072-03:00 0HN4F89PCK6A6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:01:19.4414392-03:00 0HN4F89PCK6A6:00000001 [INF] Executing "ObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-06-18T00:01:19.4420562-03:00 0HN4F89PCK6A6:00000001 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 53.7252ms (afa2e885)
+2024-06-18T00:01:19.4421791-03:00 0HN4F89PCK6A6:00000001 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:01:19.4425658-03:00 0HN4F89PCK6A6:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 500 null "application/json; charset=utf-8" 55.3739ms (74253ad3)
+2024-06-18T00:01:26.1697194-03:00 0HN4F89PCK6A7:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 145 (d509f86a)
+2024-06-18T00:01:26.1702081-03:00 0HN4F89PCK6A7:00000001 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:01:26.1704919-03:00 0HN4F89PCK6A7:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:01:26.1938119-03:00 0HN4F89PCK6A7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:01:26.2096756-03:00 0HN4F89PCK6A7:00000001 [ERR] Failed executing DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_promotions (enddate, productid, startdate, value)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id, promotiontype;" (627a98df)
+2024-06-18T00:01:26.2273833-03:00 0HN4F89PCK6A7:00000001 [ERR] An exception occurred in the database while saving changes for context type '"ApiTF.BaseDados.Models.TfDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgResolverTypeInfo.GetResolutionAsObject(Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgTypeInfo.GetObjectResolution(Object value)
+   at Npgsql.NpgsqlParameter.ResolveConverter(PgTypeInfo typeInfo)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgResolverTypeInfo.GetResolutionAsObject(Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgTypeInfo.GetObjectResolution(Object value)
+   at Npgsql.NpgsqlParameter.ResolveConverter(PgTypeInfo typeInfo)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ApiTF.Services.PromotionService.Insert(PromotionDTO dto) in C:\Users\USER\source\repos\ApiTF\ApiTF\Services\PromotionService.cs:line 34
+2024-06-18T00:01:26.3002130-03:00 0HN4F89PCK6A7:00000001 [INF] Executing "ObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-06-18T00:01:26.3007561-03:00 0HN4F89PCK6A7:00000001 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 130.024ms (afa2e885)
+2024-06-18T00:01:26.3009115-03:00 0HN4F89PCK6A7:00000001 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:01:26.3013106-03:00 0HN4F89PCK6A7:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 500 null "application/json; charset=utf-8" 131.6408ms (74253ad3)
+2024-06-18T00:08:58.2054476-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T00:08:58.3036817-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T00:08:58.3085816-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T00:08:58.3121061-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T00:08:58.7076089-03:00 0HN4F8FVFSPAU:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T00:08:59.1486645-03:00 0HN4F8FVFSPAU:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 449.9638ms (74253ad3)
+2024-06-18T00:08:59.2290537-03:00 0HN4F8FVFSPAU:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T00:08:59.2290522-03:00 0HN4F8FVFSPAV:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T00:08:59.2362192-03:00 0HN4F8FVFSPAU:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 7.4127ms (74253ad3)
+2024-06-18T00:08:59.2938620-03:00 0HN4F8FVFSPAV:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 65.1366ms (74253ad3)
+2024-06-18T00:08:59.3630389-03:00 0HN4F8FVFSPAV:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T00:08:59.5395238-03:00 0HN4F8FVFSPAV:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 176.4344ms (74253ad3)
+2024-06-18T00:11:17.7754502-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T00:11:17.9779803-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T00:11:17.9854801-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T00:11:17.9957255-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T00:11:18.3628260-03:00 0HN4F8H92UJ1U:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T00:11:18.9413631-03:00 0HN4F8H92UJ1U:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 587.5552ms (74253ad3)
+2024-06-18T00:11:18.9799982-03:00 0HN4F8H92UJ1U:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T00:11:18.9830586-03:00 0HN4F8H92UJ1U:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 3.1969ms (74253ad3)
+2024-06-18T00:11:18.9840840-03:00 0HN4F8H92UJ1T:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T00:11:19.1071733-03:00 0HN4F8H92UJ1T:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 123.131ms (74253ad3)
+2024-06-18T00:11:19.1793931-03:00 0HN4F8H92UJ1T:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T00:11:19.3726961-03:00 0HN4F8H92UJ1T:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 193.1806ms (74253ad3)
+2024-06-18T00:11:36.3501762-03:00 0HN4F8H92UJ1V:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 135 (d509f86a)
+2024-06-18T00:11:36.3615125-03:00 0HN4F8H92UJ1V:00000001 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:11:36.3981088-03:00 0HN4F8H92UJ1V:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:11:39.0392762-03:00 0HN4F8H92UJ1V:00000001 [INF] Executed DbCommand ("107"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:11:39.4195360-03:00 0HN4F8H92UJ1V:00000001 [ERR] Failed executing DbCommand ("13"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_promotions (enddate, productid, startdate, value)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id, promotiontype;" (627a98df)
+2024-06-18T00:11:39.5181239-03:00 0HN4F8H92UJ1V:00000001 [ERR] An exception occurred in the database while saving changes for context type '"ApiTF.BaseDados.Models.TfDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgResolverTypeInfo.GetResolutionAsObject(Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgTypeInfo.GetObjectResolution(Object value)
+   at Npgsql.NpgsqlParameter.ResolveConverter(PgTypeInfo typeInfo)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgResolverTypeInfo.GetResolutionAsObject(Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgTypeInfo.GetObjectResolution(Object value)
+   at Npgsql.NpgsqlParameter.ResolveConverter(PgTypeInfo typeInfo)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ApiTF.Services.PromotionService.Insert(PromotionDTO dto) in C:\Users\USER\source\repos\ApiTF\ApiTF\Services\PromotionService.cs:line 38
+2024-06-18T00:11:39.7628203-03:00 0HN4F8H92UJ1V:00000001 [INF] Executing "ObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-06-18T00:11:39.7753070-03:00 0HN4F8H92UJ1V:00000001 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 3369.8453ms (afa2e885)
+2024-06-18T00:11:39.7757192-03:00 0HN4F8H92UJ1V:00000001 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:11:39.7894849-03:00 0HN4F8H92UJ1V:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 500 null "application/json; charset=utf-8" 3439.3563ms (74253ad3)
+2024-06-18T00:15:36.1807180-03:00 0HN4F8H92UJ20:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 125 (d509f86a)
+2024-06-18T00:15:36.1833112-03:00 0HN4F8H92UJ20:00000001 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:15:36.1840836-03:00 0HN4F8H92UJ20:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:15:36.2041299-03:00 0HN4F8H92UJ20:00000001 [INF] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. (605b4265)
+2024-06-18T00:15:36.2443115-03:00 0HN4F8H92UJ20:00000001 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 59.8943ms (afa2e885)
+2024-06-18T00:15:36.2445315-03:00 0HN4F8H92UJ20:00000001 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:15:36.2450485-03:00 0HN4F8H92UJ20:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 400 null "application/problem+json; charset=utf-8" 64.4809ms (74253ad3)
+2024-06-18T00:17:19.2677646-03:00 0HN4F8H92UJ21:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 127 (d509f86a)
+2024-06-18T00:17:19.2686940-03:00 0HN4F8H92UJ21:00000001 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:17:19.2692259-03:00 0HN4F8H92UJ21:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:17:19.4684702-03:00 0HN4F8H92UJ21:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:17:19.4861226-03:00 0HN4F8H92UJ21:00000001 [ERR] Failed executing DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_promotions (enddate, productid, startdate, value)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id, promotiontype;" (627a98df)
+2024-06-18T00:17:19.5046939-03:00 0HN4F8H92UJ21:00000001 [ERR] An exception occurred in the database while saving changes for context type '"ApiTF.BaseDados.Models.TfDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgResolverTypeInfo.GetResolutionAsObject(Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgTypeInfo.GetObjectResolution(Object value)
+   at Npgsql.NpgsqlParameter.ResolveConverter(PgTypeInfo typeInfo)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.ArgumentException: Cannot write DateTime with Kind=UTC to PostgreSQL type 'timestamp without time zone', consider using 'timestamp with time zone'. Note that it's not possible to mix DateTimes with different Kinds in an array, range, or multirange. (Parameter 'value')
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(DateTime value, Nullable`1 expectedPgTypeId, Boolean validateOnly)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver.<>c.<CreateResolver>b__0_0(DateTimeConverterResolver`1 resolver, DateTime value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.Converters.DateTimeConverterResolver`1.Get(T value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgConverterResolver`1.GetAsObjectInternal(PgTypeInfo typeInfo, Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgResolverTypeInfo.GetResolutionAsObject(Object value, Nullable`1 expectedPgTypeId)
+   at Npgsql.Internal.PgTypeInfo.GetObjectResolution(Object value)
+   at Npgsql.NpgsqlParameter.ResolveConverter(PgTypeInfo typeInfo)
+   at Npgsql.NpgsqlParameter.ResolveTypeInfo(PgSerializerOptions options)
+   at Npgsql.NpgsqlParameterCollection.ProcessParameters(PgSerializerOptions options, Boolean validateValues, CommandType commandType)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ApiTF.Services.PromotionService.Insert(PromotionDTO dto) in C:\Users\USER\source\repos\ApiTF\ApiTF\Services\PromotionService.cs:line 38
+2024-06-18T00:17:19.6256191-03:00 0HN4F8H92UJ21:00000001 [INF] Executing "ObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-06-18T00:17:19.6261378-03:00 0HN4F8H92UJ21:00000001 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 356.7131ms (afa2e885)
+2024-06-18T00:17:19.6262852-03:00 0HN4F8H92UJ21:00000001 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:17:19.6267809-03:00 0HN4F8H92UJ21:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 500 null "application/json; charset=utf-8" 361.9729ms (74253ad3)
+2024-06-18T00:21:11.6404584-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T00:21:11.8029203-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T00:21:11.8059009-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T00:21:11.8083668-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T00:21:12.0847442-03:00 0HN4F8MQ20FM1:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T00:21:12.5906711-03:00 0HN4F8MQ20FM1:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 519.0903ms (74253ad3)
+2024-06-18T00:21:12.6505134-03:00 0HN4F8MQ20FM1:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T00:21:12.6508483-03:00 0HN4F8MQ20FM0:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T00:21:12.6543868-03:00 0HN4F8MQ20FM1:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 4.1291ms (74253ad3)
+2024-06-18T00:21:12.7182266-03:00 0HN4F8MQ20FM0:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 67.2531ms (74253ad3)
+2024-06-18T00:21:12.8032377-03:00 0HN4F8MQ20FM0:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T00:21:13.0202090-03:00 0HN4F8MQ20FM0:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 217.0351ms (74253ad3)
+2024-06-18T00:21:37.3994113-03:00 0HN4F8MQ20FM0:00000003 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - "application/json" 137 (d509f86a)
+2024-06-18T00:21:37.4133029-03:00 0HN4F8MQ20FM0:00000003 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (500cc934)
+2024-06-18T00:21:37.4622979-03:00 0HN4F8MQ20FM0:00000003 [INF] Route matched with "{action = \"Insert\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Insert(ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:21:40.2297066-03:00 0HN4F8MQ20FM0:00000003 [INF] Executed DbCommand ("105"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:21:40.6170183-03:00 0HN4F8MQ20FM0:00000003 [INF] Executed DbCommand ("38"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_promotions (enddate, productid, startdate, value)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id, promotiontype;" (0723d8ff)
+2024-06-18T00:21:40.6686070-03:00 0HN4F8MQ20FM0:00000003 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbPromotion"'. (605b4265)
+2024-06-18T00:21:40.7007232-03:00 0HN4F8MQ20FM0:00000003 [INF] Executed action "ApiTF.Controllers.PromotionController.Insert (ApiTF)" in 3231.068ms (afa2e885)
+2024-06-18T00:21:40.7010586-03:00 0HN4F8MQ20FM0:00000003 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T00:21:40.7180721-03:00 0HN4F8MQ20FM0:00000003 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/api/Promotion""" - 200 null "application/json; charset=utf-8" 3318.7772ms (74253ad3)
+2024-06-18T00:23:35.8328928-03:00 0HN4F8MQ20FM0:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/promotion/4""?productId=17&startDate=2024-06-18T10%3A23%3A54&endDate=2024-07-18T10%3A23%3A54" - null null (d509f86a)
+2024-06-18T00:23:35.8382524-03:00 0HN4F8MQ20FM0:00000004 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.GetByPromotion (ApiTF)"' (500cc934)
+2024-06-18T00:23:35.8519281-03:00 0HN4F8MQ20FM0:00000004 [INF] Route matched with "{action = \"GetByPromotion\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] GetByPromotion(Int32, System.DateTime, System.DateTime)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:23:35.9344049-03:00 0HN4F8MQ20FM0:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:23:36.0306498-03:00 0HN4F8MQ20FM0:00000004 [INF] Executed DbCommand ("4"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__startDate_1='?' (DbType = DateTime2), @__endDate_2='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate >= @__startDate_1 AND t.enddate <= @__endDate_2" (0723d8ff)
+2024-06-18T00:23:36.0468292-03:00 0HN4F8MQ20FM0:00000004 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.BaseDados.Models.TbPromotion, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T00:23:36.0495103-03:00 0HN4F8MQ20FM0:00000004 [INF] Executed action "ApiTF.Controllers.PromotionController.GetByPromotion (ApiTF)" in 197.242ms (afa2e885)
+2024-06-18T00:23:36.0496434-03:00 0HN4F8MQ20FM0:00000004 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.GetByPromotion (ApiTF)"' (99874f2b)
+2024-06-18T00:23:36.0501652-03:00 0HN4F8MQ20FM0:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/promotion/4""?productId=17&startDate=2024-06-18T10%3A23%3A54&endDate=2024-07-18T10%3A23%3A54" - 200 null "application/json; charset=utf-8" 225.82ms (74253ad3)
+2024-06-18T00:24:18.5715577-03:00 0HN4F8MQ20FM0:00000005 [INF] Request starting "HTTP/1.1" "PUT" "http"://"localhost:5263""""/api/Promotion/4""" - "application/json" 140 (d509f86a)
+2024-06-18T00:24:18.5932282-03:00 0HN4F8MQ20FM0:00000005 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Update (ApiTF)"' (500cc934)
+2024-06-18T00:24:18.6215109-03:00 0HN4F8MQ20FM0:00000005 [INF] Route matched with "{action = \"Update\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Update(Int32, ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:24:18.6390654-03:00 0HN4F8MQ20FM0:00000005 [INF] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. (605b4265)
+2024-06-18T00:24:18.6648648-03:00 0HN4F8MQ20FM0:00000005 [INF] Executed action "ApiTF.Controllers.PromotionController.Update (ApiTF)" in 43.1066ms (afa2e885)
+2024-06-18T00:24:18.6650014-03:00 0HN4F8MQ20FM0:00000005 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Update (ApiTF)"' (99874f2b)
+2024-06-18T00:24:18.6652478-03:00 0HN4F8MQ20FM0:00000005 [INF] Request finished "HTTP/1.1" "PUT" "http"://"localhost:5263""""/api/Promotion/4""" - 400 null "application/problem+json; charset=utf-8" 95.9367ms (74253ad3)
+2024-06-18T00:26:19.2502028-03:00 0HN4F8MQ20FM0:00000006 [INF] Request starting "HTTP/1.1" "PUT" "http"://"localhost:5263""""/api/Promotion/4""" - "application/json" 138 (d509f86a)
+2024-06-18T00:26:19.2506274-03:00 0HN4F8MQ20FM0:00000006 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.Update (ApiTF)"' (500cc934)
+2024-06-18T00:26:19.2509823-03:00 0HN4F8MQ20FM0:00000006 [INF] Route matched with "{action = \"Update\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] Update(Int32, ApiTF.Services.DTOs.PromotionDTO)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:26:19.4017651-03:00 0HN4F8MQ20FM0:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T00:26:19.4098313-03:00 0HN4F8MQ20FM0:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T00:26:19.4172887-03:00 0HN4F8MQ20FM0:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T00:26:19.4563619-03:00 0HN4F8MQ20FM0:00000006 [INF] Executed DbCommand ("21"ms) [Parameters=["@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_promotions SET enddate = @p0, productid = @p1, promotiontype = @p2, startdate = @p3, value = @p4
+WHERE id = @p5;" (0723d8ff)
+2024-06-18T00:26:19.4578787-03:00 0HN4F8MQ20FM0:00000006 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbPromotion"'. (605b4265)
+2024-06-18T00:26:19.4584033-03:00 0HN4F8MQ20FM0:00000006 [INF] Executed action "ApiTF.Controllers.PromotionController.Update (ApiTF)" in 207.2825ms (afa2e885)
+2024-06-18T00:26:19.4584977-03:00 0HN4F8MQ20FM0:00000006 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.Update (ApiTF)"' (99874f2b)
+2024-06-18T00:26:19.4589330-03:00 0HN4F8MQ20FM0:00000006 [INF] Request finished "HTTP/1.1" "PUT" "http"://"localhost:5263""""/api/Promotion/4""" - 200 null "application/json; charset=utf-8" 208.7827ms (74253ad3)
+2024-06-18T00:27:15.5251593-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T00:27:15.6802150-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T00:27:15.6847997-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T00:27:15.6883055-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T00:27:16.0706741-03:00 0HN4F8Q6G6US8:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T00:27:16.4937608-03:00 0HN4F8Q6G6US8:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 427.6567ms (74253ad3)
+2024-06-18T00:27:16.5515655-03:00 0HN4F8Q6G6US8:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T00:27:16.5538503-03:00 0HN4F8Q6G6US7:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T00:27:16.5618813-03:00 0HN4F8Q6G6US8:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 10.3324ms (74253ad3)
+2024-06-18T00:27:16.6159721-03:00 0HN4F8Q6G6US7:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 62.1961ms (74253ad3)
+2024-06-18T00:27:16.6980039-03:00 0HN4F8Q6G6US7:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T00:27:16.9157986-03:00 0HN4F8Q6G6US7:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 217.7544ms (74253ad3)
+2024-06-18T00:27:42.5527104-03:00 0HN4F8Q6G6US7:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/4""" - null null (d509f86a)
+2024-06-18T00:27:42.5660630-03:00 0HN4F8Q6G6US7:00000003 [INF] Executing endpoint '"ApiTF.Controllers.PromotionController.GetById (ApiTF)"' (500cc934)
+2024-06-18T00:27:42.6105812-03:00 0HN4F8Q6G6US7:00000003 [INF] Route matched with "{action = \"GetById\", controller = \"Promotion\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbPromotion] GetById(Int32)" on controller "ApiTF.Controllers.PromotionController" ("ApiTF"). (122b2fdf)
+2024-06-18T00:27:45.5048438-03:00 0HN4F8Q6G6US7:00000003 [INF] Executed DbCommand ("110"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T00:27:45.6691070-03:00 0HN4F8Q6G6US7:00000003 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbPromotion"'. (605b4265)
+2024-06-18T00:27:45.7135380-03:00 0HN4F8Q6G6US7:00000003 [INF] Executed action "ApiTF.Controllers.PromotionController.GetById (ApiTF)" in 3095.8354ms (afa2e885)
+2024-06-18T00:27:45.7138221-03:00 0HN4F8Q6G6US7:00000003 [INF] Executed endpoint '"ApiTF.Controllers.PromotionController.GetById (ApiTF)"' (99874f2b)
+2024-06-18T00:27:45.7286115-03:00 0HN4F8Q6G6US7:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/Promotion/4""" - 200 null "application/json; charset=utf-8" 3176.1315ms (74253ad3)
+2024-06-18T00:32:39.4116586-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T00:32:39.4891016-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T00:32:39.4934525-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T00:32:39.4955690-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T00:32:39.9898241-03:00 0HN4F8T731PJ5:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T00:32:40.2938711-03:00 0HN4F8T731PJ5:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 307.7223ms (74253ad3)
+2024-06-18T00:32:40.3057885-03:00 0HN4F8T731PJ5:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T00:32:40.3109988-03:00 0HN4F8T731PJ5:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 5.6801ms (74253ad3)
+2024-06-18T00:32:40.3205696-03:00 0HN4F8T731PJ5:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T00:32:40.3642388-03:00 0HN4F8T731PJ5:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 43.7668ms (74253ad3)
+2024-06-18T00:32:40.4246224-03:00 0HN4F8T731PJ5:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T00:32:40.5445081-03:00 0HN4F8T731PJ5:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 119.7253ms (74253ad3)
+2024-06-18T00:33:10.9361698-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T00:33:11.0114882-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T00:33:11.0140369-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T00:33:11.0158345-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T00:33:11.5334163-03:00 0HN4F8TGG7I2S:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T00:33:11.7961941-03:00 0HN4F8TGG7I2S:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 268.3193ms (74253ad3)
+2024-06-18T00:33:11.8286950-03:00 0HN4F8TGG7I2S:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T00:33:11.8288764-03:00 0HN4F8TGG7I2U:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T00:33:11.8312602-03:00 0HN4F8TGG7I2S:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 4.1707ms (74253ad3)
+2024-06-18T00:33:11.8637116-03:00 0HN4F8TGG7I2U:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 34.7941ms (74253ad3)
+2024-06-18T00:33:11.9232266-03:00 0HN4F8TGG7I2U:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T00:33:12.0487080-03:00 0HN4F8TGG7I2U:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 125.5164ms (74253ad3)
+2024-06-18T14:45:50.7075947-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T14:45:50.8151127-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T14:45:50.8220897-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T14:45:50.8274597-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T14:45:51.3377516-03:00 0HN4FNPV6Q0NM:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T14:45:52.0461198-03:00 0HN4FNPV6Q0NM:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 718.4575ms (74253ad3)
+2024-06-18T14:45:52.0721607-03:00 0HN4FNPV6Q0NM:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T14:45:52.0753851-03:00 0HN4FNPV6Q0NM:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 3.3709ms (74253ad3)
+2024-06-18T14:45:52.0977992-03:00 0HN4FNPV6Q0NM:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T14:45:52.1399227-03:00 0HN4FNPV6Q0NM:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 42.1954ms (74253ad3)
+2024-06-18T14:45:52.2173712-03:00 0HN4FNPV6Q0NM:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T14:45:52.4128983-03:00 0HN4FNPV6Q0NM:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 195.5721ms (74253ad3)
+2024-06-18T14:46:30.1860519-03:00 0HN4FNPV6Q0NN:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/description/camisa""" - null null (d509f86a)
+2024-06-18T14:46:30.1958470-03:00 0HN4FNPV6Q0NN:00000001 [INF] Executing endpoint '"ApiTF.Controllers.ProductController.GetByDescription (ApiTF)"' (500cc934)
+2024-06-18T14:46:30.2276727-03:00 0HN4FNPV6Q0NN:00000001 [INF] Route matched with "{action = \"GetByDescription\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbProduct] GetByDescription(System.String)" on controller "ApiTF.Controllers.ProductController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:46:32.5198539-03:00 0HN4FNPV6Q0NN:00000001 [INF] Executed DbCommand ("64"ms) [Parameters=["@__description_0_contains='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.description LIKE @__description_0_contains" (0723d8ff)
+2024-06-18T14:46:32.6082267-03:00 0HN4FNPV6Q0NN:00000001 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.BaseDados.Models.TbProduct, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T14:46:32.6278055-03:00 0HN4FNPV6Q0NN:00000001 [INF] Executed action "ApiTF.Controllers.ProductController.GetByDescription (ApiTF)" in 2396.5346ms (afa2e885)
+2024-06-18T14:46:32.6279282-03:00 0HN4FNPV6Q0NN:00000001 [INF] Executed endpoint '"ApiTF.Controllers.ProductController.GetByDescription (ApiTF)"' (99874f2b)
+2024-06-18T14:46:32.6349926-03:00 0HN4FNPV6Q0NN:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/description/camisa""" - 200 null "application/json; charset=utf-8" 2449.0585ms (74253ad3)
+2024-06-18T14:54:41.0211096-03:00 0HN4FNPV6Q0NO:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 152 (d509f86a)
+2024-06-18T14:54:41.0220258-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T14:54:41.0268136-03:00 0HN4FNPV6Q0NO:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:54:41.1725869-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T14:54:41.2025602-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T14:54:41.2446571-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed DbCommand ("16"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__currentDate_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate <= @__currentDate_1 AND t.enddate >= @__currentDate_1
+ORDER BY t.promotiontype" (0723d8ff)
+2024-06-18T14:54:41.4809987-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed DbCommand ("17"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32), @p7='?', @p8='?' (DbType = DateTime2), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;
+INSERT INTO tb_sales (code, createat, discount, price, productid, qty)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING id;" (0723d8ff)
+2024-06-18T14:54:41.5315260-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_stock_logs (createdat, productid, qty)
+VALUES (@p0, @p1, @p2)
+RETURNING id;" (0723d8ff)
+2024-06-18T14:54:41.5368168-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T14:54:41.5424203-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 515.3248ms (afa2e885)
+2024-06-18T14:54:41.5425273-03:00 0HN4FNPV6Q0NO:00000001 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T14:54:41.5428088-03:00 0HN4FNPV6Q0NO:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 200 null "application/json; charset=utf-8" 521.8367ms (74253ad3)
+2024-06-18T14:55:03.5392975-03:00 0HN4FNPV6Q0NO:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/bce5d726-6276-4997-888f-df00f96be1f5""" - null null (d509f86a)
+2024-06-18T14:55:03.5396494-03:00 0HN4FNPV6Q0NO:00000002 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.GetByCode (ApiTF)"' (500cc934)
+2024-06-18T14:55:03.5429724-03:00 0HN4FNPV6Q0NO:00000002 [INF] Route matched with "{action = \"GetByCode\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetByCode(System.String)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:55:03.6908807-03:00 0HN4FNPV6Q0NO:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__code_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.code, t.createat, t.discount, t.price, t.productid, t.qty, t0.id, t0.barcode, t0.barcodetype, t0.costprice, t0.description, t0.price, t0.stock
+FROM tb_sales AS t
+INNER JOIN tb_products AS t0 ON t.productid = t0.id
+WHERE t.code = @__code_0
+LIMIT 1" (0723d8ff)
+2024-06-18T14:55:03.6965735-03:00 0HN4FNPV6Q0NO:00000002 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T14:55:03.6968379-03:00 0HN4FNPV6Q0NO:00000002 [INF] Executed action "ApiTF.Controllers.SalesController.GetByCode (ApiTF)" in 153.7834ms (afa2e885)
+2024-06-18T14:55:03.6968954-03:00 0HN4FNPV6Q0NO:00000002 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.GetByCode (ApiTF)"' (99874f2b)
+2024-06-18T14:55:03.6971401-03:00 0HN4FNPV6Q0NO:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/bce5d726-6276-4997-888f-df00f96be1f5""" - 200 null "application/json; charset=utf-8" 157.8895ms (74253ad3)
+2024-06-18T14:56:43.5943427-03:00 0HN4FNPV6Q0NP:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/report""?startDate=2024-06-18T10%3A23%3A54&endDate=2024-07-18T10%3A23%3A54" - null null (d509f86a)
+2024-06-18T14:56:43.5952387-03:00 0HN4FNPV6Q0NP:00000001 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.GenerateSaleReport (ApiTF)"' (500cc934)
+2024-06-18T14:56:43.5982046-03:00 0HN4FNPV6Q0NP:00000001 [INF] Route matched with "{action = \"GenerateSaleReport\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ApiTF.Services.DTOs.SalesReportDTO]] GenerateSaleReport(System.DateTime, System.DateTime)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:56:43.6438739-03:00 0HN4FNPV6Q0NP:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__startDate_0='?' (DbType = DateTime2), @__AddDays_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.code, t.createat, t.discount, t.price, t.productid, t.qty, t0.id, t0.barcode, t0.barcodetype, t0.costprice, t0.description, t0.price, t0.stock
+FROM tb_sales AS t
+INNER JOIN tb_products AS t0 ON t.productid = t0.id
+WHERE t.createat >= @__startDate_0 AND t.createat < @__AddDays_1" (0723d8ff)
+2024-06-18T14:56:43.6470850-03:00 0HN4FNPV6Q0NP:00000001 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.Services.DTOs.SalesReportDTO, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T14:56:43.6498453-03:00 0HN4FNPV6Q0NP:00000001 [INF] Executed action "ApiTF.Controllers.SalesController.GenerateSaleReport (ApiTF)" in 51.5069ms (afa2e885)
+2024-06-18T14:56:43.6499226-03:00 0HN4FNPV6Q0NP:00000001 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.GenerateSaleReport (ApiTF)"' (99874f2b)
+2024-06-18T14:56:43.6501187-03:00 0HN4FNPV6Q0NP:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/report""?startDate=2024-06-18T10%3A23%3A54&endDate=2024-07-18T10%3A23%3A54" - 200 null "application/json; charset=utf-8" 55.9123ms (74253ad3)
+2024-06-18T14:57:42.4725803-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 153 (d509f86a)
+2024-06-18T14:57:42.4744742-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T14:57:42.4746954-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:57:42.4827299-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T14:57:42.4872920-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T14:57:42.4940837-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__currentDate_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate <= @__currentDate_1 AND t.enddate >= @__currentDate_1
+ORDER BY t.promotiontype" (0723d8ff)
+2024-06-18T14:57:42.5005286-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32), @p7='?', @p8='?' (DbType = DateTime2), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;
+INSERT INTO tb_sales (code, createat, discount, price, productid, qty)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING id;" (0723d8ff)
+2024-06-18T14:57:42.5081745-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_stock_logs (createdat, productid, qty)
+VALUES (@p0, @p1, @p2)
+RETURNING id;" (0723d8ff)
+2024-06-18T14:57:42.5087984-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T14:57:42.5090213-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 34.278ms (afa2e885)
+2024-06-18T14:57:42.5090600-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T14:57:42.5091638-03:00 0HN4FNPV6Q0NQ:00000001 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 200 null "application/json; charset=utf-8" 41.5348ms (74253ad3)
+2024-06-18T14:57:53.7774445-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/dd07b3fb-1ade-402e-8cfc-10a2aa5c6b4e""" - null null (d509f86a)
+2024-06-18T14:57:53.7777646-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.GetByCode (ApiTF)"' (500cc934)
+2024-06-18T14:57:53.7779476-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Route matched with "{action = \"GetByCode\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetByCode(System.String)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:57:53.7900318-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__code_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.code, t.createat, t.discount, t.price, t.productid, t.qty, t0.id, t0.barcode, t0.barcodetype, t0.costprice, t0.description, t0.price, t0.stock
+FROM tb_sales AS t
+INNER JOIN tb_products AS t0 ON t.productid = t0.id
+WHERE t.code = @__code_0
+LIMIT 1" (0723d8ff)
+2024-06-18T14:57:53.7907734-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T14:57:53.7910977-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Executed action "ApiTF.Controllers.SalesController.GetByCode (ApiTF)" in 13.0451ms (afa2e885)
+2024-06-18T14:57:53.7911511-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.GetByCode (ApiTF)"' (99874f2b)
+2024-06-18T14:57:53.7913274-03:00 0HN4FNPV6Q0NQ:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/dd07b3fb-1ade-402e-8cfc-10a2aa5c6b4e""" - 200 null "application/json; charset=utf-8" 13.9404ms (74253ad3)
+2024-06-18T14:59:53.0041245-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 153 (d509f86a)
+2024-06-18T14:59:53.0053472-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T14:59:53.0139235-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T14:59:53.0752591-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T14:59:53.0823148-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T14:59:53.0894492-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed DbCommand ("4"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__currentDate_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate <= @__currentDate_1 AND t.enddate >= @__currentDate_1
+ORDER BY t.promotiontype" (0723d8ff)
+2024-06-18T14:59:53.0945061-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32), @p7='?', @p8='?' (DbType = DateTime2), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;
+INSERT INTO tb_sales (code, createat, discount, price, productid, qty)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING id;" (0723d8ff)
+2024-06-18T14:59:53.0988826-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_stock_logs (createdat, productid, qty)
+VALUES (@p0, @p1, @p2)
+RETURNING id;" (0723d8ff)
+2024-06-18T14:59:53.0991865-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T14:59:53.0993816-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 85.376ms (afa2e885)
+2024-06-18T14:59:53.0994159-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T14:59:53.0996253-03:00 0HN4FNPV6Q0NQ:00000003 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 200 null "application/json; charset=utf-8" 95.542ms (74253ad3)
+2024-06-18T15:00:02.8952795-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/940d3db2-4425-4a4a-b6f2-f69fc08a9a99""" - null null (d509f86a)
+2024-06-18T15:00:02.8955656-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.GetByCode (ApiTF)"' (500cc934)
+2024-06-18T15:00:02.8956964-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Route matched with "{action = \"GetByCode\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetByCode(System.String)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:00:02.9020461-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__code_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.code, t.createat, t.discount, t.price, t.productid, t.qty, t0.id, t0.barcode, t0.barcodetype, t0.costprice, t0.description, t0.price, t0.stock
+FROM tb_sales AS t
+INNER JOIN tb_products AS t0 ON t.productid = t0.id
+WHERE t.code = @__code_0
+LIMIT 1" (0723d8ff)
+2024-06-18T15:00:02.9029911-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T15:00:02.9032543-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Executed action "ApiTF.Controllers.SalesController.GetByCode (ApiTF)" in 7.5003ms (afa2e885)
+2024-06-18T15:00:02.9033112-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.GetByCode (ApiTF)"' (99874f2b)
+2024-06-18T15:00:02.9034373-03:00 0HN4FNPV6Q0NQ:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/940d3db2-4425-4a4a-b6f2-f69fc08a9a99""" - 200 null "application/json; charset=utf-8" 8.4234ms (74253ad3)
+2024-06-18T15:01:27.8882037-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 153 (d509f86a)
+2024-06-18T15:01:27.8935784-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T15:01:27.8939214-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:01:27.9056211-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T15:01:27.9115206-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T15:01:27.9196604-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__currentDate_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate <= @__currentDate_1 AND t.enddate >= @__currentDate_1
+ORDER BY t.promotiontype" (0723d8ff)
+2024-06-18T15:01:27.9277214-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32), @p7='?', @p8='?' (DbType = DateTime2), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;
+INSERT INTO tb_sales (code, createat, discount, price, productid, qty)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING id;" (0723d8ff)
+2024-06-18T15:01:27.9356740-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_stock_logs (createdat, productid, qty)
+VALUES (@p0, @p1, @p2)
+RETURNING id;" (0723d8ff)
+2024-06-18T15:01:27.9361896-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T15:01:27.9365604-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 42.5505ms (afa2e885)
+2024-06-18T15:01:27.9366879-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T15:01:27.9368778-03:00 0HN4FNPV6Q0NQ:00000005 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 200 null "application/json; charset=utf-8" 48.8838ms (74253ad3)
+2024-06-18T15:02:10.1082200-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 153 (d509f86a)
+2024-06-18T15:02:10.1193916-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T15:02:10.1210165-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:02:10.1265356-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T15:02:10.1305371-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T15:02:10.1377195-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__currentDate_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate <= @__currentDate_1 AND t.enddate >= @__currentDate_1
+ORDER BY t.promotiontype" (0723d8ff)
+2024-06-18T15:02:10.1435460-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32), @p7='?', @p8='?' (DbType = DateTime2), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;
+INSERT INTO tb_sales (code, createat, discount, price, productid, qty)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING id;" (0723d8ff)
+2024-06-18T15:02:10.1501307-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_stock_logs (createdat, productid, qty)
+VALUES (@p0, @p1, @p2)
+RETURNING id;" (0723d8ff)
+2024-06-18T15:02:10.1504810-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T15:02:10.1507800-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 29.7051ms (afa2e885)
+2024-06-18T15:02:10.1508157-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T15:02:10.1509993-03:00 0HN4FNPV6Q0NQ:00000006 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 200 null "application/json; charset=utf-8" 42.9259ms (74253ad3)
+2024-06-18T15:02:25.0330014-03:00 0HN4FNPV6Q0NQ:00000007 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T15:02:25.0593724-03:00 0HN4FNPV6Q0NQ:00000007 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 26.4701ms (74253ad3)
+2024-06-18T15:02:25.0893182-03:00 0HN4FNPV6Q0NQ:00000008 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T15:02:25.0899791-03:00 0HN4FNPV6Q0NQ:00000008 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 0.8386ms (74253ad3)
+2024-06-18T15:02:25.0944478-03:00 0HN4FNPV6Q0NQ:00000009 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T15:02:25.1067724-03:00 0HN4FNPV6Q0NQ:00000009 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 12.3826ms (74253ad3)
+2024-06-18T15:02:25.2405786-03:00 0HN4FNPV6Q0NQ:0000000A [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T15:02:25.2581362-03:00 0HN4FNPV6Q0NR:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/favicon-32x32.png""" - null null (d509f86a)
+2024-06-18T15:02:25.2654218-03:00 0HN4FNPV6Q0NQ:0000000A [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 24.8402ms (74253ad3)
+2024-06-18T15:02:25.2741568-03:00 0HN4FNPV6Q0NR:00000001 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2024-06-18T15:02:25.2743419-03:00 0HN4FNPV6Q0NR:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 16.2908ms (74253ad3)
+2024-06-18T15:02:43.9427735-03:00 0HN4FNPV6Q0NR:00000002 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 154 (d509f86a)
+2024-06-18T15:02:43.9430023-03:00 0HN4FNPV6Q0NR:00000002 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T15:02:43.9431469-03:00 0HN4FNPV6Q0NR:00000002 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:02:43.9552203-03:00 0HN4FNPV6Q0NR:00000002 [INF] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. (605b4265)
+2024-06-18T15:02:43.9694555-03:00 0HN4FNPV6Q0NR:00000002 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 26.2178ms (afa2e885)
+2024-06-18T15:02:43.9695419-03:00 0HN4FNPV6Q0NR:00000002 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T15:02:43.9696586-03:00 0HN4FNPV6Q0NR:00000002 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 400 null "application/problem+json; charset=utf-8" 26.962ms (74253ad3)
+2024-06-18T15:02:52.1720474-03:00 0HN4FNPV6Q0NR:00000003 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - "application/json" 153 (d509f86a)
+2024-06-18T15:02:52.1722299-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (500cc934)
+2024-06-18T15:02:52.1723306-03:00 0HN4FNPV6Q0NR:00000003 [INF] Route matched with "{action = \"Insert\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[ApiTF.BaseDados.Models.TbSale] Insert(ApiTF.Services.DTOs.SaleDTO)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:02:52.1767978-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+FROM tb_products AS t
+WHERE t.id = @__id_0
+LIMIT 1" (0723d8ff)
+2024-06-18T15:02:52.1824805-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T15:02:52.1878332-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32), @__currentDate_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.enddate, t.productid, t.promotiontype, t.startdate, t.value
+FROM tb_promotions AS t
+WHERE t.productid = @__productId_0 AND t.startdate <= @__currentDate_1 AND t.enddate >= @__currentDate_1
+ORDER BY t.promotiontype" (0723d8ff)
+2024-06-18T15:02:52.1955772-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32), @p7='?', @p8='?' (DbType = DateTime2), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tb_products SET barcode = @p0, barcodetype = @p1, costprice = @p2, description = @p3, price = @p4, stock = @p5
+WHERE id = @p6;
+INSERT INTO tb_sales (code, createat, discount, price, productid, qty)
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING id;" (0723d8ff)
+2024-06-18T15:02:52.2075321-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tb_stock_logs (createdat, productid, qty)
+VALUES (@p0, @p1, @p2)
+RETURNING id;" (0723d8ff)
+2024-06-18T15:02:52.2079263-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executing "OkObjectResult", writing value of type '"ApiTF.BaseDados.Models.TbSale"'. (605b4265)
+2024-06-18T15:02:52.2082755-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed action "ApiTF.Controllers.SalesController.Insert (ApiTF)" in 35.9079ms (afa2e885)
+2024-06-18T15:02:52.2083493-03:00 0HN4FNPV6Q0NR:00000003 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.Insert (ApiTF)"' (99874f2b)
+2024-06-18T15:02:52.2084683-03:00 0HN4FNPV6Q0NR:00000003 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5263""""/Sales""" - 200 null "application/json; charset=utf-8" 36.4481ms (74253ad3)
+2024-06-18T15:05:04.0109785-03:00 0HN4FNPV6Q0NR:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/report""?startDate=2024-06-18T10%3A23%3A54&endDate=2024-07-18T10%3A23%3A54" - null null (d509f86a)
+2024-06-18T15:05:04.0140180-03:00 0HN4FNPV6Q0NR:00000004 [INF] Executing endpoint '"ApiTF.Controllers.SalesController.GenerateSaleReport (ApiTF)"' (500cc934)
+2024-06-18T15:05:04.0142120-03:00 0HN4FNPV6Q0NR:00000004 [INF] Route matched with "{action = \"GenerateSaleReport\", controller = \"Sales\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ApiTF.Services.DTOs.SalesReportDTO]] GenerateSaleReport(System.DateTime, System.DateTime)" on controller "ApiTF.Controllers.SalesController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:05:04.0902441-03:00 0HN4FNPV6Q0NR:00000004 [INF] Executed DbCommand ("5"ms) [Parameters=["@__startDate_0='?' (DbType = DateTime2), @__AddDays_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.code, t.createat, t.discount, t.price, t.productid, t.qty, t0.id, t0.barcode, t0.barcodetype, t0.costprice, t0.description, t0.price, t0.stock
+FROM tb_sales AS t
+INNER JOIN tb_products AS t0 ON t.productid = t0.id
+WHERE t.createat >= @__startDate_0 AND t.createat < @__AddDays_1" (0723d8ff)
+2024-06-18T15:05:04.0913109-03:00 0HN4FNPV6Q0NR:00000004 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.Services.DTOs.SalesReportDTO, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T15:05:04.0917616-03:00 0HN4FNPV6Q0NR:00000004 [INF] Executed action "ApiTF.Controllers.SalesController.GenerateSaleReport (ApiTF)" in 77.4813ms (afa2e885)
+2024-06-18T15:05:04.0918548-03:00 0HN4FNPV6Q0NR:00000004 [INF] Executed endpoint '"ApiTF.Controllers.SalesController.GenerateSaleReport (ApiTF)"' (99874f2b)
+2024-06-18T15:05:04.0921760-03:00 0HN4FNPV6Q0NR:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/Sales/report""?startDate=2024-06-18T10%3A23%3A54&endDate=2024-07-18T10%3A23%3A54" - 200 null "application/json; charset=utf-8" 81.2537ms (74253ad3)
+2024-06-18T15:06:23.4886354-03:00 0HN4FNPV6Q0NR:00000005 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/StockLog/17/logs""" - null null (d509f86a)
+2024-06-18T15:06:23.4898953-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executing endpoint '"ApiTF.Controllers.StockLogController.GetLogByProductId (ApiTF)"' (500cc934)
+2024-06-18T15:06:23.5002326-03:00 0HN4FNPV6Q0NR:00000005 [INF] Route matched with "{action = \"GetLogByProductId\", controller = \"StockLog\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ApiTF.Services.DTOs.StockLogResultDTO]] GetLogByProductId(Int32)" on controller "ApiTF.Controllers.StockLogController" ("ApiTF"). (122b2fdf)
+2024-06-18T15:06:23.5106773-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0)" (0723d8ff)
+2024-06-18T15:06:23.5242088-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM tb_stock_logs AS t
+    WHERE t.productid = @__productId_0)" (0723d8ff)
+2024-06-18T15:06:23.5379514-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.createdat AS \"Date\", t0.barcode AS \"Barcode\", t0.description AS \"Description\", t.qty AS \"Quantity\", t0.id AS \"Id\", t0.barcodetype AS \"BarcodeType\", t0.stock AS \"Stock\", t0.price AS \"Price\", t0.costprice AS \"CostPrice\"
+FROM tb_stock_logs AS t
+INNER JOIN tb_products AS t0 ON t.productid = t0.id
+WHERE t.productid = @__productId_0" (0723d8ff)
+2024-06-18T15:06:23.5401626-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.Services.DTOs.StockLogResultDTO, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T15:06:23.5428490-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executed action "ApiTF.Controllers.StockLogController.GetLogByProductId (ApiTF)" in 42.5172ms (afa2e885)
+2024-06-18T15:06:23.5428986-03:00 0HN4FNPV6Q0NR:00000005 [INF] Executed endpoint '"ApiTF.Controllers.StockLogController.GetLogByProductId (ApiTF)"' (99874f2b)
+2024-06-18T15:06:23.5430467-03:00 0HN4FNPV6Q0NR:00000005 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/StockLog/17/logs""" - 200 null "application/json; charset=utf-8" 54.5426ms (74253ad3)
+2024-06-18T16:34:49.2633102-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T16:34:49.3606308-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T16:34:49.3655626-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T16:34:49.3676062-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T16:34:49.6922225-03:00 0HN4FPMRS45L8:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T16:34:50.7233781-03:00 0HN4FPMRS45L8:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 1048.494ms (74253ad3)
+2024-06-18T16:34:50.7451034-03:00 0HN4FPMRS45L8:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T16:34:50.7481032-03:00 0HN4FPMRS45L8:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 3.5553ms (74253ad3)
+2024-06-18T16:34:50.8230144-03:00 0HN4FPMRS45L8:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T16:34:50.9077982-03:00 0HN4FPMRS45L8:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 84.8934ms (74253ad3)
+2024-06-18T16:34:50.9944054-03:00 0HN4FPMRS45L8:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T16:34:51.1421580-03:00 0HN4FPMRS45L8:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 147.8386ms (74253ad3)
+2024-06-18T16:34:59.7015253-03:00 0HN4FPMRS45L8:00000005 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/StockLog/17/logs""" - null null (d509f86a)
+2024-06-18T16:34:59.7122261-03:00 0HN4FPMRS45L8:00000005 [INF] Executing endpoint '"ApiTF.Controllers.StockLogController.GetLogByProductId (ApiTF)"' (500cc934)
+2024-06-18T16:34:59.7553386-03:00 0HN4FPMRS45L8:00000005 [INF] Route matched with "{action = \"GetLogByProductId\", controller = \"StockLog\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ApiTF.Services.DTOs.StockLogResultDTO]] GetLogByProductId(Int32)" on controller "ApiTF.Controllers.StockLogController" ("ApiTF"). (122b2fdf)
+2024-06-18T16:35:01.6493423-03:00 0HN4FPMRS45L8:00000005 [INF] Executed DbCommand ("51"ms) [Parameters=["@__productId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t0.id, t0.barcode, t0.barcodetype, t0.costprice, t0.description, t0.price, t0.stock, t1.id, t1.createdat, t1.productid, t1.qty
+FROM (
+    SELECT t.id, t.barcode, t.barcodetype, t.costprice, t.description, t.price, t.stock
+    FROM tb_products AS t
+    WHERE t.id = @__productId_0
+    LIMIT 1
+) AS t0
+LEFT JOIN tb_stock_logs AS t1 ON t0.id = t1.productid
+ORDER BY t0.id" (0723d8ff)
+2024-06-18T16:35:01.7755374-03:00 0HN4FPMRS45L8:00000005 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[ApiTF.Services.DTOs.StockLogResultDTO, ApiTF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-06-18T16:35:01.8092256-03:00 0HN4FPMRS45L8:00000005 [INF] Executed action "ApiTF.Controllers.StockLogController.GetLogByProductId (ApiTF)" in 2048.0321ms (afa2e885)
+2024-06-18T16:35:01.8094054-03:00 0HN4FPMRS45L8:00000005 [INF] Executed endpoint '"ApiTF.Controllers.StockLogController.GetLogByProductId (ApiTF)"' (99874f2b)
+2024-06-18T16:35:01.8193533-03:00 0HN4FPMRS45L8:00000005 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/api/StockLog/17/logs""" - 200 null "application/json; charset=utf-8" 2118.1642ms (74253ad3)
+2024-06-18T16:35:30.0674981-03:00  [INF] Now listening on: "http://localhost:5263" (d826f4b8)
+2024-06-18T16:35:30.1290430-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-18T16:35:30.1321318-03:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-18T16:35:30.1345020-03:00  [INF] Content root path: "C:\Users\USER\source\repos\ApiTF\ApiTF" (cc26f24e)
+2024-06-18T16:35:30.6351254-03:00 0HN4FPN83KPC4:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - null null (d509f86a)
+2024-06-18T16:35:30.9069685-03:00 0HN4FPN83KPC4:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 281.3438ms (74253ad3)
+2024-06-18T16:35:30.9411953-03:00 0HN4FPN83KPC3:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - null null (d509f86a)
+2024-06-18T16:35:30.9411954-03:00 0HN4FPN83KPC4:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2024-06-18T16:35:30.9442017-03:00 0HN4FPN83KPC4:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_framework/aspnetcore-browser-refresh.js""" - 200 13746 "application/javascript; charset=utf-8" 3.1685ms (74253ad3)
+2024-06-18T16:35:30.9889992-03:00 0HN4FPN83KPC3:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 47.8707ms (74253ad3)
+2024-06-18T16:35:31.0388745-03:00 0HN4FPN83KPC3:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-06-18T16:35:31.1659757-03:00 0HN4FPN83KPC3:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5263""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 127.1947ms (74253ad3)

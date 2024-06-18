@@ -26,7 +26,7 @@ namespace ApiTF.Services
             if (!PromotionValidate.Validate(dto))
                 return null;
 
-            ProductExists(dto.Productid);
+            ValidateProduct(dto.Productid);
 
             var entity = _mapper.Map<TbPromotion>(dto);
 
@@ -38,15 +38,19 @@ namespace ApiTF.Services
 
         public TbPromotion Update(PromotionDTO dto, int id)
         {
-            PromotionExists(id);
-            ProductExists(dto.Productid);
+            ValidatePromotion(id);
+            ValidateProduct(dto.Productid);
 
             if (!PromotionValidate.Validate(dto))
                 return null;
 
             var existingEntity = GetById(id);
 
-            _mapper.Map(dto, existingEntity);
+            existingEntity.Startdate = dto.Startdate;
+            existingEntity.Enddate = dto.Enddate;
+            existingEntity.Promotiontype = dto.Promotiontype;
+            existingEntity.Productid = dto.Productid;
+            existingEntity.Value = dto.Value;
 
             _dbContext.Update(existingEntity);
             _dbContext.SaveChanges();
@@ -67,22 +71,17 @@ namespace ApiTF.Services
         public IEnumerable<TbPromotion> GetByPromotion(int productId, DateTime startDate, DateTime endDate)
         {
             ValidateDates(startDate, endDate);
-            ProductExists(productId);
+            ValidateProduct(productId);
 
-            var promotion = _dbContext.TbPromotions
-                .Where(c => c.Productid == productId && startDate >= c.Startdate && endDate <= c.Enddate)
-                .ToList();
-
-            if (!promotion.Any())
-            {
-                throw new NotFoundException("Nenhuma promoção encontrada para o período especificado.");
-            }
-
-            return promotion;
+            return _dbContext.TbPromotions
+                             .Where(p => p.Productid == productId &&
+                                         p.Startdate >= startDate &&
+                                         p.Enddate <= endDate)
+                             .ToList();
         }
         public List<TbPromotion> GetActivePromotions(int productId)
         {
-            ProductExists(productId);
+            ValidateProduct(productId);
 
             var currentDate = DateTime.Now;
 
@@ -100,15 +99,15 @@ namespace ApiTF.Services
 
             return promotion;
         }
-        private void ProductExists(int productId)
+        private void ValidateProduct(int productId)
         {
-            var productExists = _dbContext.TbProducts.Any(p => p.Id == productId);
-            if (!productExists)
+            var validateProduct = _dbContext.TbProducts.Any(p => p.Id == productId);
+            if (!validateProduct)
             {
                 throw new NotFoundException("Produto não encontrado.");
             }
         }
-        private void PromotionExists(int promotionId)
+        private void ValidatePromotion(int promotionId)
         {
             var promotionExists = GetById(promotionId);
             if (promotionExists == null)

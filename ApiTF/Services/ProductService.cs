@@ -2,6 +2,7 @@
 using ApiTF.BaseDados.Models;
 using ApiTF.Services.DTOs;
 using ApiTF.Services.Exceptions;
+using ApiTF.Services.Parsers;
 using ApiTF.Services.Validate;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
@@ -28,12 +29,14 @@ namespace ApiTF.Services
         {
             if (!ProductValidate.IsValid(dto.Barcode, dto.Barcodetype))
             {
-                throw new InvalidEntityException("Código de barras inválido.");
+                throw new InvalidEntityException("Dados do produto inválidos.");
             }
 
             var entity = _mapper.Map<TbProduct>(dto);
             _dbContext.Add(entity);
             _dbContext.SaveChanges();
+
+            Console.WriteLine("ID do produto: " + entity.Id);
 
             _stockLogService.InsertStockLog(new StockLogDTO
             {
@@ -45,14 +48,17 @@ namespace ApiTF.Services
             return entity;
         }
 
-        public TbProduct GetByDescription(string description)
+        public IEnumerable<TbProduct> GetByDescription(string description)
         {
-            var existingEntity = _dbContext.TbProducts.FirstOrDefault(c => c.Description == description);
+            var existingEntity = _dbContext.TbProducts
+                                                 .Where(c => c.Description.Contains(description))
+                                                 .ToList();
 
-            if (existingEntity == null)
+            if (existingEntity == null || existingEntity.Count == 0)
             {
-                throw new NotFoundException("Registro não existe");
+                throw new NotFoundException("Nenhum registro encontrado");
             }
+
             return existingEntity;
         }
 
@@ -82,6 +88,8 @@ namespace ApiTF.Services
         {
             var existingEntity = GetById(id);
 
+            int oldStock = existingEntity.Stock;
+
             if (existingEntity == null)
             {
                 throw new NotFoundException("Registro não existe");
@@ -89,14 +97,24 @@ namespace ApiTF.Services
 
             if (!ProductValidate.IsValid(dto.Barcode, dto.Barcodetype))
             {
-                throw new InvalidEntityException("Código de barras inválido.");
+                throw new InvalidEntityException("Dados do produto inválidos.");
             }
 
+            existingEntity.Description = dto.Description;
+            existingEntity.Barcode = dto.Barcode;
+            existingEntity.Barcodetype = dto.Barcodetype;
+            existingEntity.Price = dto.Price;
+            existingEntity.Costprice = dto.Costprice;
 
-            int oldStock = existingEntity.Stock;
-            _mapper.Map(dto, existingEntity);
             _dbContext.Update(existingEntity);
             _dbContext.SaveChanges();
+
+            _stockLogService.InsertStockLog(new StockLogDTO
+            {
+                Productid = existingEntity.Id,
+                Qty = existingEntity.Stock - oldStock,
+                Createdat = DateTime.Now
+            });
 
             return existingEntity;
         }

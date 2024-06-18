@@ -27,48 +27,56 @@ namespace ApiTF.Services
             _mapper = mapper;
         }
 
-        public IEnumerable<TbSale> Insert(List<SaleDTO> dtoList)
+        public TbSale Insert(SaleDTO dto)
         {
-            var sales = new List<TbSale>();
-            var currentTime = DateTime.Now;
-            var code = Guid.NewGuid().ToString();
-
-            foreach (var dto in dtoList)
+            var product = _productService.GetById(dto.Productid);
+            
+            if (product == null)
             {
-                ValidateProduct(dto.Productid, dto.Qty);
-
-                var promotions = _promotionService.GetActivePromotions(dto.Productid);
-
-                var product = _productService.GetById(dto.Productid);
-                decimal unitPrice = product.Price;
-                decimal originalPrice = unitPrice;
-                foreach (var promotion in promotions)
-                {
-                    unitPrice = ApplyPromotion(unitPrice, promotion);
-                }
-
-                decimal totalDiscount = originalPrice - unitPrice;
-
-                AdjustStockAndLog(dto.Productid, dto.Qty);
-
-                var sale = _mapper.Map<TbSale>(dto);
-                sale.Code = code;
-                sale.Price = unitPrice;
-                sale.Discount = totalDiscount;
-                sale.Createat = currentTime;
-
-                _dbContext.Add(sale);
-                sales.Add(sale);
+                throw new NotFoundException("Produto não existe");
             }
 
+            if (product.Stock < dto.Qty)
+            {
+                throw new InsufficientStockException("Estoque insuficiente para a movimentação");
+            }
+
+            var activePromotions = _promotionService.GetActivePromotions(dto.Productid);
+            var finalPrice = CalculateFinalPrice(product.Price, activePromotions, dto.Qty);
+
+            var sale = _mapper.Map<TbSale>(dto);
+            sale.Price = finalPrice;
+            sale.Createat = DateTime.Now;
+
+            product.Stock -= dto.Qty;
+
+            _dbContext.Entry(product).State = EntityState.Modified;
+            _dbContext.TbSales.Add(sale);
             _dbContext.SaveChanges();
 
-            return sales;
+            _stockLogService.InsertStockLog(new StockLogDTO
+            {
+                Productid = sale.Productid,
+                Qty = -sale.Qty,
+                Createdat = DateTime.Now
+            });
+
+            return sale;
+        }
+
+        private decimal CalculateFinalPrice(decimal basePrice, IEnumerable<TbPromotion> promotions, int quantity)
+        {
+            decimal discountedPrice = basePrice;
+            foreach (var promo in promotions)
+            {
+                discountedPrice = ApplyPromotion(discountedPrice, promo);
+            }
+            return discountedPrice * quantity;
         }
 
         public TbSale GetByCode(string code)
         {
-            var existingEntity = _dbContext.TbSales.FirstOrDefault(c => c.Code == code);
+            var existingEntity = _dbContext.TbSales.Include(c => c.Product).FirstOrDefault(c => c.Code == code);
             if (existingEntity == null)
             {
                 throw new NotFoundException("Nenhuma venda encontrada para este código");
@@ -76,34 +84,30 @@ namespace ApiTF.Services
             return existingEntity;
         }
 
-        public List<SalesReportDTO> GenerateSalesReport(DateTime startDate, DateTime endDate)
+        public List<SalesReportDTO> GetSalesReport(DateTime startDate, DateTime endDate)
         {
             ValidateReportDates(startDate, endDate);
 
-            var query = GetSalesReport(startDate, endDate);
+            var sales = _dbContext.TbSales
+                .Include(s => s.Product)
+                .Where(s => s.Createat >= startDate && s.Createat < endDate.AddDays(1))
+                .ToList();
 
-            if (!query.Any())
+            if (!sales.Any())
             {
                 throw new NotFoundException("Nenhuma venda encontrada para o período.");
             }
 
-            return query.ToList();
-        }
+            var report = sales.Select(sale => new SalesReportDTO
+            {
+                SaleCode = sale.Code,
+                ProductDescription = sale.Product.Description,
+                Price = sale.Price,
+                Quantity = sale.Qty,
+                SaleDate = sale.Createat
+            }).ToList();
 
-        private IEnumerable<SalesReportDTO> GetSalesReport(DateTime startDate, DateTime endDate)
-        {
-            var query = from sale in _dbContext.TbSales
-                        join product in _dbContext.TbProducts on sale.Productid equals product.Id
-                        where sale.Createat >= startDate && sale.Createat < endDate.AddDays(1)
-                        select new SalesReportDTO
-                        {
-                            SaleCode = sale.Code,
-                            ProductDescription = product.Description,
-                            Price = sale.Price,
-                            Quantity = sale.Qty,
-                            SaleDate = sale.Createat
-                        };
-            return query;
+            return report;
         }
 
         private decimal ApplyPromotion(decimal price, TbPromotion promotion)
@@ -114,44 +118,6 @@ namespace ApiTF.Services
                 1 => price - promotion.Value,
                 _ => price,
             };
-        }
-
-        private void AdjustStockAndLog(int productId, int quantity)
-        {
-            var product = _productService.GetById(productId);
-            if (product == null)
-            {
-                throw new NotFoundException("Produto não existe");
-            }
-
-            if (product.Stock < quantity)
-            {
-                throw new InsufficientStockException("Estoque insuficiente para a movimentação");
-            }
-
-            _productService.AdjustStock(productId, -quantity);
-
-            var stockLogDto = new StockLogDTO
-            {
-                Productid = productId,
-                Qty = -quantity,
-                Createdat = DateTime.Now
-            };
-            _stockLogService.InsertStockLog(stockLogDto);
-        }
-
-        private void ValidateProduct(int productId, int quantity)
-        {
-            var product = _productService.GetById(productId);
-            if (product == null)
-            {
-                throw new NotFoundException("Produto não existe");
-            }
-
-            if (product.Stock < quantity)
-            {
-                throw new InsufficientStockException("Estoque insuficiente para a movimentação");
-            }
         }
 
         private void ValidateReportDates(DateTime startDate, DateTime endDate)

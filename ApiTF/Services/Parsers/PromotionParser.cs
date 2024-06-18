@@ -1,4 +1,5 @@
-﻿using ApiTF.BaseDados.Models;
+﻿using System;
+using ApiTF.BaseDados.Models;
 using ApiTF.Services.DTOs;
 
 namespace ApiTF.Services.Parsers
@@ -9,9 +10,8 @@ namespace ApiTF.Services.Parsers
         {
             return new TbPromotion
             {
-                Id = dto.Id,
-                Startdate = dto.Startdate,
-                Enddate = dto.Enddate,
+                Startdate = DateTime.SpecifyKind(dto.Startdate, DateTimeKind.Unspecified),
+                Enddate = DateTime.SpecifyKind(dto.Enddate, DateTimeKind.Unspecified),
                 Promotiontype = dto.Promotiontype,
                 Productid = dto.Productid,
                 Value = dto.Value

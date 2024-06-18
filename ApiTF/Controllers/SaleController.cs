@@ -1,4 +1,5 @@
-﻿using ApiTF.Services;
+﻿using ApiTF.BaseDados.Models;
+using ApiTF.Services;
 using ApiTF.Services.DTOs;
 using ApiTF.Services.Exceptions;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +22,7 @@ namespace ApiTF.Controllers
         /// <summary>
         /// Insere uma nova venda.
         /// </summary>
-        /// <param name="saleDtoList">A lista de dados da venda.</param>
+        /// <param name="sale">A lista de dados da venda.</param>
         /// <returns>Os detalhes da venda registrada.</returns>
         /// <response code="200">Venda criada com sucesso</response>
         /// <response code="400">Erro de validação nos dados da venda ou que o estoque é insuficiente.</response>
@@ -29,12 +30,12 @@ namespace ApiTF.Controllers
         /// <response code="500">Erro interno do servidor.</response>
 
         [HttpPost]
-        public IActionResult Insert(List<SaleDTO> saleDtoList)
+        public ActionResult<TbSale> Insert(SaleDTO sale)
         {
             try
             {
-                var sales = _service.Insert(saleDtoList);
-                return Ok(sales);
+                var entity = _service.Insert(sale);
+                return Ok(entity);
             }
             catch (NotFoundException e)
             {
@@ -96,7 +97,7 @@ namespace ApiTF.Controllers
         {
             try
             {
-                var report = _service.GenerateSalesReport(startDate, endDate);
+                var report = _service.GetSalesReport(startDate, endDate);
                 return Ok(report);
             }
             catch (NotFoundException e)

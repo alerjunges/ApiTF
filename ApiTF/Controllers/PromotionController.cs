@@ -82,21 +82,6 @@ namespace ApiTF.Controllers
             }
         }
 
-
-        [HttpGet("{id}")]
-        public ActionResult<TbPromotion> GetById(int id)
-        {
-            try
-            {
-                var entity = _service.GetById(id);
-                return Ok(entity);
-            }
-            catch (NotFoundException e)
-            {
-                return NotFound(e.Message);
-            }
-        }
-
         /// <summary>
         /// Obtém as promoções de um produto dentro de um determinado período.
         /// </summary>
@@ -109,7 +94,7 @@ namespace ApiTF.Controllers
         /// <response code="404">Indica que o ID do produto não foi encontrado ou nenhuma promoção foi encontrada para o período especificado.</response>
         /// <response code="500">Erro interno do servidor.</response>
 
-        [HttpGet("promotion/{id}")]
+        [HttpGet("promotion/{productId}")]
         public ActionResult<TbPromotion> GetByPromotion(int productId, DateTime startDate, DateTime endDate)
         {
             try
