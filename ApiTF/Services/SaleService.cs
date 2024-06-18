@@ -43,7 +43,6 @@ namespace ApiTF.Services
 
             var activePromotions = _promotionService.GetActivePromotions(dto.Productid);
 
-            // Calculate the final price after applying promotions
             decimal unitPrice = product.Price;
             decimal discountedPrice = unitPrice;
             foreach (var promotion in activePromotions)
@@ -56,8 +55,8 @@ namespace ApiTF.Services
             decimal totalDiscount = totalOriginalPrice - totalDiscountedPrice;
 
             var sale = _mapper.Map<TbSale>(dto);
-            sale.Price = totalOriginalPrice; // The original total price
-            sale.Discount = totalDiscount; // Total discount applied
+            sale.Price = totalOriginalPrice; 
+            sale.Discount = totalDiscount; 
             sale.Createat = DateTime.Now;
 
             product.Stock -= dto.Qty;
@@ -74,16 +73,6 @@ namespace ApiTF.Services
             });
 
             return sale;
-        }
-
-        private decimal CalculateFinalPrice(decimal basePrice, IEnumerable<TbPromotion> promotions, int quantity)
-        {
-            decimal discountedPrice = basePrice;
-            foreach (var promo in promotions)
-            {
-                discountedPrice = ApplyPromotion(discountedPrice, promo);
-            }
-            return discountedPrice * quantity;
         }
 
         public TbSale GetByCode(string code)
