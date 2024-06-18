@@ -235,7 +235,7 @@
             <response code="404">Indica que o ID do produto não foi encontrado ou nenhuma promoção foi encontrada para o período especificado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ApiTF.Controllers.SalesController.Insert(ApiTF.Services.DTOs.SaleDTO)">
+        <member name="M:ApiTF.Controllers.SalesController.Insert(ApiTF.Services.DTOs.InsertSaleDTO)">
             <summary>
             Insere uma nova venda.
             </summary>
@@ -277,6 +277,21 @@
             <response code="200">Logs do produto consultado com sucesso.</response>
             <response code="404">Logs do produto não encontrados.</response>
             <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="P:ApiTF.Services.DTOs.InsertSaleDTO.Code">
+            <summary>
+            Código da venda (Um código único da venda, onde todos os items de uma venda, terão o mesmo código). Deve ser uma chave guid.
+            </summary>
+        </member>
+        <member name="P:ApiTF.Services.DTOs.InsertSaleDTO.Productid">
+            <summary>
+            Código do produto
+            </summary>
+        </member>
+        <member name="P:ApiTF.Services.DTOs.InsertSaleDTO.Qty">
+            <summary>
+            Quantidade vendida
+            </summary>
         </member>
         <member name="P:ApiTF.Services.DTOs.SaleDTO.Code">
             <summary>

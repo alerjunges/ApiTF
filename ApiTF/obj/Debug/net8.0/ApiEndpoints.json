@@ -282,7 +282,7 @@
     "Parameters": [
       {
         "Name": "sale",
-        "Type": "ApiTF.Services.DTOs.SaleDTO",
+        "Type": "ApiTF.Services.DTOs.InsertSaleDTO",
         "IsRequired": true
       }
     ],

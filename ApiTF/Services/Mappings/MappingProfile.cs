@@ -12,8 +12,9 @@ namespace ApiTF.Services.Mapping
             CreateMap<PromotionDTO, TbPromotion>().ReverseMap();
             CreateMap<SaleDTO, TbSale>().ReverseMap();
             CreateMap<StockLogDTO, TbStockLog>().ReverseMap();
+            CreateMap<InsertSaleDTO, TbSale>().ReverseMap();
             //CreateMap<SaleReportDTO, SaleDTO>();
-            
+
         }
     }
 }

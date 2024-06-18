@@ -27,10 +27,10 @@ namespace ApiTF.Services
             _mapper = mapper;
         }
 
-        public TbSale Insert(SaleDTO dto)
+        public TbSale Insert(InsertSaleDTO dto)
         {
             var product = _productService.GetById(dto.Productid);
-            
+
             if (product == null)
             {
                 throw new NotFoundException("Produto não existe");
@@ -42,10 +42,22 @@ namespace ApiTF.Services
             }
 
             var activePromotions = _promotionService.GetActivePromotions(dto.Productid);
-            var finalPrice = CalculateFinalPrice(product.Price, activePromotions, dto.Qty);
+
+            // Calculate the final price after applying promotions
+            decimal unitPrice = product.Price;
+            decimal discountedPrice = unitPrice;
+            foreach (var promotion in activePromotions)
+            {
+                discountedPrice = ApplyPromotion(discountedPrice, promotion);
+            }
+
+            decimal totalOriginalPrice = unitPrice;
+            decimal totalDiscountedPrice = discountedPrice;
+            decimal totalDiscount = totalOriginalPrice - totalDiscountedPrice;
 
             var sale = _mapper.Map<TbSale>(dto);
-            sale.Price = finalPrice;
+            sale.Price = totalOriginalPrice; // The original total price
+            sale.Discount = totalDiscount; // Total discount applied
             sale.Createat = DateTime.Now;
 
             product.Stock -= dto.Qty;

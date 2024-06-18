@@ -30,7 +30,7 @@ namespace ApiTF.Controllers
         /// <response code="500">Erro interno do servidor.</response>
 
         [HttpPost]
-        public ActionResult<TbSale> Insert(SaleDTO sale)
+        public ActionResult<TbSale> Insert(InsertSaleDTO sale)
         {
             try
             {
